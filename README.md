@@ -25,8 +25,8 @@ C++20, Qt Widgets, SQLite, CMake, and Boost.UUID.
 
 ### Menu flow
 
-The original console design shows how players and tournaments are created, searched, and managed. The current app uses Qt Widgets.
+Follow the Qt buttons to create or search for players and tournaments. The Back arrows show which screen opens when you return.
 
-![Original MatchForge console menu flow for player and tournament management](assets/diagrams/menu-flow.png)
+![MatchForge Qt menu flow showing button actions, search results, and return paths](assets/diagrams/menu-flow.png)
 
 [Open full-size menu flow](assets/diagrams/menu-flow.png)
