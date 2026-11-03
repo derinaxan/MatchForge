@@ -30,3 +30,9 @@ Follow the Qt buttons to create or search for players and tournaments. The Back 
 ![MatchForge Qt menu flow showing button actions, search results, and return paths](assets/diagrams/menu-flow.png)
 
 [Open full-size menu flow](assets/diagrams/menu-flow.png)
+
+### Database schema
+
+![MatchForge SQLite tables and their foreign key relationships](assets/diagrams/MatchForge-ER.png)
+
+[Open full-size database diagram](assets/diagrams/MatchForge-ER.png) · [Editable draw.io file](assets/diagrams/MatchForge-ER.drawio)
