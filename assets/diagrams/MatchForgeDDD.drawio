@@ -1,0 +1,264 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="GuW_5FAhBBslcU6rYvB5">
+    <mxGraphModel dx="3527" dy="2631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="obTurXnpXgfDWesPvatl-15" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;ENUM&amp;gt;&lt;br&gt;SportsType" vertex="1">
+          <mxGeometry height="82" width="140" x="-960" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-16" parent="obTurXnpXgfDWesPvatl-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="BASKETBALL" vertex="1">
+          <mxGeometry height="26" width="140" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-17" parent="obTurXnpXgfDWesPvatl-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="FOOTBALL" vertex="1">
+          <mxGeometry height="26" width="140" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-19" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingLeft=4;spacingRight=4;fontColor=default;fillColor=none;gradientColor=none;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Entity&amp;gt;&lt;br&gt;Tournament&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="619" width="510" x="60" y="-220" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-20" parent="obTurXnpXgfDWesPvatl-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=default;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;-id: UUID&lt;br&gt;-name: string&lt;br&gt;-year: int&lt;br&gt;-hasStarted: bool&lt;br&gt;-matches: vector&amp;lt;Match&amp;gt;&lt;br&gt;-players: vector&amp;lt;Player*&amp;gt;&lt;br&gt;-type: SportsType&lt;br&gt;-currentRound: Round&lt;br&gt;-size: TournamentSize&lt;br&gt;-winner: Player*&lt;/div&gt;" vertex="1">
+          <mxGeometry height="158" width="510" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-21" parent="obTurXnpXgfDWesPvatl-19" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="510" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-22" parent="obTurXnpXgfDWesPvatl-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+Tournament(string&amp;amp;, int, SportsType, TournamentSize)&lt;br&gt;+Tournament(UUID, const string&amp;amp;, int, SportsType, TournamentSize, Round)&lt;br&gt;+getId(): UUID&lt;br&gt;+setId(UUID): void&lt;br&gt;+getName(): const string&amp;amp;&lt;br&gt;+setName(string&amp;amp;): void&lt;br&gt;+getHasStarted(): bool&lt;br&gt;+setHasStarted(bool): void&lt;br&gt;+getYear(): int&lt;br&gt;+setYear(int): void&lt;br&gt;+getWinner(): Player*&lt;br&gt;+setWinner(Player&amp;amp;): void&lt;br&gt;+getMatches(): vector&amp;lt;Match&amp;gt;&amp;amp;&lt;br&gt;+getMatches(): const vector&amp;lt;Match&amp;gt;&amp;amp;&lt;br&gt;+addMatch(const Match&amp;amp;): void&lt;br&gt;+getPlayers(): const vector&amp;lt;Player*&amp;gt;&lt;br&gt;+addPlayer(Player&amp;amp;): bool&lt;br&gt;+removePlayer(const Player&amp;amp;): bool&lt;br&gt;+containsPlayer(const Player&amp;amp;): bool&lt;br&gt;+getType(): SportsType&lt;br&gt;+setType(SportsType): void&lt;br&gt;+getCurrentRound(): Round&lt;br&gt;+setCurrentRound(Round): void&lt;br&gt;+getSize(): TournamentSize&lt;br&gt;+setSize(TournamentSize): void&lt;br&gt;+print(): void&lt;br&gt;+printDetailed(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="413" width="510" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-23" parent="1" style="swimlane;align=left;verticalAlign=top;childLayout=stackLayout;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;spacingLeft=4;spacingRight=4;fontColor=default;gradientColor=none;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Entity&amp;gt;&amp;nbsp;&lt;div&gt;Match&lt;/div&gt;" vertex="1">
+          <mxGeometry height="349" width="450" x="900" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-24" parent="obTurXnpXgfDWesPvatl-23" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;-id: UUID&lt;br&gt;-homePlayer: Player&amp;amp;&lt;br&gt;-awayPlayer: Player&amp;amp;&lt;br&gt;-score: Score&lt;br&gt;-round: Round&lt;/div&gt;" vertex="1">
+          <mxGeometry height="83" width="450" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-25" parent="obTurXnpXgfDWesPvatl-23" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="450" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-26" parent="obTurXnpXgfDWesPvatl-23" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=default;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+Match(Player&amp;amp;, Player&amp;amp;, Round)&lt;br&gt;+Match(UUID, Player&amp;amp;, Player&amp;amp;, Round)&lt;br&gt;+getId(): const UUID&lt;br&gt;+getHomePlayer(): Player&amp;amp;&lt;br&gt;+setHomePlayer(Player&amp;amp;): void&lt;br&gt;+getAwayPlayer(): Player&amp;amp;&lt;br&gt;+setAwayPlayer(Player&amp;amp;): void&lt;br&gt;+setScore(Score): void&lt;br&gt;+getScore(): Score&lt;br&gt;+updateScore(int, int, SportsType): void&lt;br&gt;+getRound(): const Round&lt;br&gt;+setRound(Round): void&lt;br&gt;+simulate(SportsType): Player&amp;amp;&lt;br&gt;+print(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="218" width="450" y="131" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-27" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Value Object&amp;gt;&lt;br&gt;Score&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="88" width="180" x="1030" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-29" parent="obTurXnpXgfDWesPvatl-27" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-28" parent="obTurXnpXgfDWesPvatl-27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+homeScore: int&lt;br&gt;+awayScore: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-38" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;ENUM&amp;gt;&lt;br&gt;TournamentSize&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="123" width="160" x="-930" y="-150" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-39" parent="obTurXnpXgfDWesPvatl-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;SIZE_32 = 32&lt;br&gt;SIZE_16 = 16&lt;br&gt;SIZE_8 = 8&lt;br&gt;SIZE_4 = 4&lt;br&gt;SIZE_2 = 2&lt;/div&gt;" vertex="1">
+          <mxGeometry height="83" width="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-66" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Entity&amp;gt;&amp;nbsp;&lt;div&gt;Player&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="409" width="425" x="60" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-67" parent="obTurXnpXgfDWesPvatl-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;-id: UUID&lt;br&gt;-name: string&lt;br&gt;-surname: string&lt;br&gt;-strength: int&lt;br&gt;-rankings: vector&amp;lt;Ranking&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="83" width="425" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-68" parent="obTurXnpXgfDWesPvatl-66" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="425" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-69" parent="obTurXnpXgfDWesPvatl-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+Player(string&amp;amp;, string&amp;amp;, int)&lt;br&gt;+Player(const UUID&amp;amp;, const string&amp;amp;, const string&amp;amp;, const int)&lt;br&gt;+getId(): const UUID&lt;br&gt;+getName(): const string&lt;br&gt;+setName(string&amp;amp;): void&lt;br&gt;+getSurname(): const string&lt;br&gt;+setSurname(string&amp;amp;): void&lt;br&gt;+getStrength(): int&lt;br&gt;+setStrength(int): void&lt;br&gt;+getRankings(): const vector&amp;lt;Ranking&amp;gt;&amp;amp;&lt;br&gt;+getRanking(SportsType): Ranking&amp;amp;&lt;br&gt;+addPoints(SportsType, int): void&lt;br&gt;+getPoints(SportsType): int&lt;br&gt;+operator==(const Player&amp;amp;): bool&lt;br&gt;+printSimple(): void&lt;br&gt;+print(): void&lt;br&gt;+printDetailed(): void&lt;br&gt;+printByType(SportsType): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="278" width="425" y="131" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-71" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;ENUM&amp;gt;&lt;br&gt;Round&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="138" width="270" x="-760" y="-200" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-72" parent="obTurXnpXgfDWesPvatl-71" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;LAST_32 = 32&lt;br&gt;LAST_16 = 16&lt;br&gt;QUARTER_FINALS = 8&lt;br&gt;SEMI_FINALS = 4&lt;br&gt;FINAL = 2&lt;br&gt;FINISHED = 0&lt;/div&gt;" vertex="1">
+          <mxGeometry height="98" width="270" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-92" edge="1" parent="1" source="obTurXnpXgfDWesPvatl-23" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=1.003;entryY=0.575;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="obTurXnpXgfDWesPvatl-22" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="898.02" y="439.4565061891362" as="sourcePoint" />
+            <mxPoint x="370" y="402.546" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-109" connectable="0" parent="obTurXnpXgfDWesPvatl-92" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.9245" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-110" connectable="0" parent="obTurXnpXgfDWesPvatl-92" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="N" vertex="1">
+          <mxGeometry relative="1" x="-0.9525" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-94" edge="1" parent="1" source="obTurXnpXgfDWesPvatl-27" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.398;entryY=1.001;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.819;exitY=0.003;exitDx=0;exitDy=0;exitPerimeter=0;" target="obTurXnpXgfDWesPvatl-26" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="680" />
+            </Array>
+            <mxPoint x="1117.435897435898" y="738.38" as="sourcePoint" />
+            <mxPoint x="1010.5500000000002" y="632.004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-164" connectable="0" parent="obTurXnpXgfDWesPvatl-94" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.7418" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-165" connectable="0" parent="obTurXnpXgfDWesPvatl-94" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8186" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-115" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div&gt;&amp;lt;Application&amp;gt;&amp;nbsp;&lt;br&gt;MainManager&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="379" width="550" x="-550" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-116" parent="obTurXnpXgfDWesPvatl-115" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;-tournaments: vector&amp;lt;Tournament&amp;gt;&lt;br&gt;-players: vector&amp;lt;Player&amp;gt;&lt;br&gt;-tournamentService: TournamentService&lt;br&gt;-playerService: PlayerService&lt;br&gt;-dbManager: DBManager&lt;br&gt;-initilzed: bool&lt;/div&gt;" vertex="1">
+          <mxGeometry height="98" width="550" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-117" parent="obTurXnpXgfDWesPvatl-115" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="550" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-118" parent="obTurXnpXgfDWesPvatl-115" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+MainManager()&lt;br&gt;+~MainManager()&lt;br&gt;+initilize(): void&lt;br&gt;+save(): void&lt;br&gt;+createPlayer(string&amp;amp;, string&amp;amp;, int): void&lt;br&gt;+searchPlayer(string&amp;amp;, string&amp;amp;): vector&amp;lt;Player*&amp;gt;&lt;br&gt;+createTournament(string&amp;amp;, int, SportsType, TournamentSize): void&lt;br&gt;+searchTournament(string&amp;amp;): vector&amp;lt;Tournament*&amp;gt;&lt;br&gt;+addPlayerToTournament(Player*, Tournament*): bool&lt;br&gt;+removePlayerFromTournament(Player*, Tournament*): bool&lt;br&gt;+getPlayedTournaments(Player&amp;amp;): vector&amp;lt;Tournament*&amp;gt;&lt;br&gt;+getNonPlayedTournaments(Player&amp;amp;): vector&amp;lt;Tournament*&amp;gt;&lt;br&gt;+startTournament(Tournament&amp;amp;): void&lt;br&gt;+simulateRound(Tournament&amp;amp;): void&lt;br&gt;+getLeaderBoard(SportsType): vector&amp;lt;Player&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="233" width="550" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-141" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Service&amp;gt;&amp;nbsp;&lt;div&gt;PlayerService&lt;/div&gt;" vertex="1">
+          <mxGeometry height="131" width="540" x="-220" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-143" parent="obTurXnpXgfDWesPvatl-141" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="540" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-144" parent="obTurXnpXgfDWesPvatl-141" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;-players: vector&amp;lt;Player&amp;gt;&amp;amp;&lt;br&gt;+PlayerService(vector&amp;lt;Player&amp;gt;&amp;amp;)&lt;br&gt;+createPLayer(string&amp;amp;, string&amp;amp;, int): Player&amp;amp;&lt;br&gt;+getMathcingPlayersByNameSurname(string&amp;amp;, string&amp;amp;): vector&amp;lt;Player*&amp;gt;&lt;br&gt;+displayLeaderboard(SportsType): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="83" width="540" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-150" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="2" vertex="1">
+          <mxGeometry height="30" width="60" x="485" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-161" edge="1" parent="1" source="obTurXnpXgfDWesPvatl-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0.72;entryY=1.002;entryDx=0;entryDy=0;entryPerimeter=0;" target="pGBTGcA9qQBk7nsCk7DJ-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-275" y="527.57" />
+              <mxPoint x="-281.57" y="527.57" />
+              <mxPoint x="-281.57" y="252.14" />
+            </Array>
+            <mxPoint x="-281.65" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-166" connectable="0" parent="obTurXnpXgfDWesPvatl-161" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.7187" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-167" connectable="0" parent="obTurXnpXgfDWesPvatl-161" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.7418" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-162" edge="1" parent="1" source="obTurXnpXgfDWesPvatl-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.086;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="obTurXnpXgfDWesPvatl-141">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-168" connectable="0" parent="obTurXnpXgfDWesPvatl-162" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9158" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-169" connectable="0" parent="obTurXnpXgfDWesPvatl-162" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8839" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-177" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div&gt;&amp;lt;Service&amp;gt;&amp;nbsp;&lt;br&gt;DBManager&lt;/div&gt;" vertex="1">
+          <mxGeometry height="184" width="390" x="-990" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-178" parent="obTurXnpXgfDWesPvatl-177" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;-dbPointer: sqlite3*&lt;br&gt;-connectionString: string&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="390" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-179" parent="obTurXnpXgfDWesPvatl-177" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="390" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-180" parent="obTurXnpXgfDWesPvatl-177" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+DBManager(const string&amp;amp;)&lt;br&gt;+connect(): void&lt;br&gt;+createTables(): bool&lt;br&gt;+loadAll(vector&amp;lt;Player&amp;gt;&amp;amp;, vector&amp;lt;Tournament&amp;gt;&amp;amp;): void&lt;br&gt;+saveAll(const vector&amp;lt;Player&amp;gt;&amp;amp;, const vector&amp;lt;Tournament&amp;gt;&amp;amp;): void&lt;br&gt;+disconnect(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="98" width="390" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-181" edge="1" parent="1" source="obTurXnpXgfDWesPvatl-177" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.017;entryY=0.958;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="obTurXnpXgfDWesPvatl-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-185" edge="1" parent="1" source="pGBTGcA9qQBk7nsCk7DJ-22" style="endArrow=open;startArrow=none;endFill=1;startFill=1;html=1;rounded=0;entryX=-0.005;entryY=0.348;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.008;exitY=-0.029;exitDx=0;exitDy=0;exitPerimeter=0;" target="obTurXnpXgfDWesPvatl-22" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-130" y="110" as="sourcePoint" />
+            <mxPoint x="210" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-187" edge="1" parent="1" style="endArrow=none;endFill=1;endSize=24;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.003;entryY=0.878;entryDx=0;entryDy=0;entryPerimeter=0;" target="obTurXnpXgfDWesPvatl-26" value="" source="obTurXnpXgfDWesPvatl-66">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="446.7" y="650" as="sourcePoint" />
+            <mxPoint x="730.3600000000001" y="623.72" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-189" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="0..*" vertex="1">
+          <mxGeometry height="30" width="60" x="800" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-203" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Struct&amp;gt;&lt;br&gt;Ranking&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="88" width="180" x="560" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-204" parent="obTurXnpXgfDWesPvatl-203" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+type: SportsType&lt;br&gt;+points: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="180" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-205" parent="obTurXnpXgfDWesPvatl-203" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-208" edge="1" parent="1" source="obTurXnpXgfDWesPvatl-141" style="endArrow=open;startArrow=none;endFill=1;startFill=1;html=1;rounded=0;entryX=0.414;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.666;exitY=0.016;exitDx=0;exitDy=0;exitPerimeter=0;" target="obTurXnpXgfDWesPvatl-69" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="70" y="860" as="sourcePoint" />
+            <mxPoint x="380" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-211" edge="1" parent="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0.389;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontStyle=0;exitX=1;exitY=0.6;" target="obTurXnpXgfDWesPvatl-203" value="1" source="obTurXnpXgfDWesPvatl-66">
+          <mxGeometry relative="1" x="-1" y="3" as="geometry">
+            <mxPoint x="450" y="690" as="sourcePoint" />
+            <mxPoint x="610" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obTurXnpXgfDWesPvatl-212" parent="1" style="text;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;span style=&quot;color: rgb(255, 255, 255); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(18, 18, 18); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;N&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="40" x="620" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-2" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=default;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Utility&amp;gt;&amp;nbsp;&lt;div&gt;Menu&lt;/div&gt;" vertex="1">
+          <mxGeometry height="281" width="330" x="900" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-4" parent="pGBTGcA9qQBk7nsCk7DJ-2" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;dashed=1;" value="" vertex="1">
+          <mxGeometry height="8" width="330" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-5" parent="pGBTGcA9qQBk7nsCk7DJ-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+mainMenu(): int&lt;br&gt;+getCreatePlayerInput(): PlayerInput&lt;br&gt;+getSearchPlayerInput(): PlayerInput&lt;br&gt;+getCraeteTournamentInput(): TournamentInput&lt;br&gt;+getSearchTournamentInput(): TournamentInput&lt;br&gt;+getSportsTypeInput(): SportsType&lt;br&gt;+getNameInput(): string&lt;br&gt;+getTournamentSizeInput(): TournamentSize&lt;br&gt;+getNumberInput(int, int): int&lt;br&gt;+terminate(): void&lt;br&gt;+successfull(): void&lt;br&gt;+enter(): void&lt;br&gt;+unsuccessfull(): void&lt;br&gt;+playerOptions(): int&lt;br&gt;+tournamentOptions(): int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="233" width="330" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-11" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;DTO&amp;gt;&lt;br&gt;PlayerInput&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="-960" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-12" parent="pGBTGcA9qQBk7nsCk7DJ-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;&quot;&gt;+string name&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+string surname&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+int strength&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-13" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=default;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Utility&amp;gt;&amp;nbsp;&lt;div&gt;Tools&lt;/div&gt;" vertex="1">
+          <mxGeometry height="251" width="410" x="414" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-14" parent="pGBTGcA9qQBk7nsCk7DJ-13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;dashed=1;" value="" vertex="1">
+          <mxGeometry height="8" width="410" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-15" parent="pGBTGcA9qQBk7nsCk7DJ-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+convertTournamentSizeToRound(const TournamentSize&amp;amp;): Round&lt;br&gt;+getNextRound(const Round&amp;amp;): Round&lt;br&gt;+printRound(const Round&amp;amp;): void&lt;br&gt;+printScore(const Score&amp;amp;): void&lt;br&gt;+printRanking(const Ranking&amp;amp;): void&lt;br&gt;+getWinPoints(const SportsType&amp;amp;): int&lt;br&gt;+getLosePoints(const SportsType&amp;amp;): int&lt;br&gt;+sportsTypeEnumToString(const SportsType&amp;amp;): string&lt;br&gt;+sportsTypeStringToEnum(const string&amp;amp;): SportsType&lt;br&gt;+roundStringToEnum(const string&amp;amp;): Round&lt;br&gt;+roundEnumToString(const Round): string&lt;br&gt;+sizeIntToEnum(const int): TournamentSize&lt;br&gt;+sizeEnumToInt(const TournamentSize): int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="203" width="410" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-16" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;DTO&amp;gt;&lt;br&gt;TournamentInput&amp;nbsp;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="190" x="-1140" y="-140" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-17" parent="pGBTGcA9qQBk7nsCk7DJ-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;&quot;&gt;+string name&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+int year&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+SportsType type&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;+TournamentSize size&lt;/div&gt;" vertex="1">
+          <mxGeometry height="68" width="190" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-19" parent="1" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&amp;lt;Service&amp;gt;&lt;br&gt;TournamentService&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="184" width="590" x="-708" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-20" parent="pGBTGcA9qQBk7nsCk7DJ-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;-tournaments: vector&amp;lt;Tournament&amp;gt;&amp;amp;&lt;br&gt;-getUpComingMatches(Tournament&amp;amp;): vector&amp;lt;Match*&amp;gt;&lt;br&gt;-calculateNewMatchups(vector&amp;lt;Player*&amp;gt;, Round): vector&amp;lt;Match&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="53" width="590" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-21" parent="pGBTGcA9qQBk7nsCk7DJ-19" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="590" y="93" as="geometry" />
+        </mxCell>
+        <mxCell id="pGBTGcA9qQBk7nsCk7DJ-22" parent="pGBTGcA9qQBk7nsCk7DJ-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;font-family:Helvetica;font-size:12px;line-height:15px&quot;&gt;+TournamentService(vector&amp;lt;Tournament&amp;gt;&amp;amp;)&lt;br&gt;+start(Tournament&amp;amp;): void&lt;br&gt;+simulateRound(Tournament&amp;amp;): void&lt;br&gt;+createTournament(string&amp;amp;, int, SportsType, TournamentSize): void&lt;br&gt;+getTournamentByName(string&amp;amp;): vector&amp;lt;Tournament*&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="83" width="590" y="101" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

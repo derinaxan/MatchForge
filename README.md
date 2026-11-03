@@ -14,7 +14,19 @@ object-oriented programming, Qt, and SQLite.
 ## Technologies
 
 C++20, Qt Widgets, SQLite, CMake, and Boost.UUID.
+
 ## Diagrams
 
-- [Class diagram](docs/diagrams/class-diagram.md) shows how players, tournaments, matches, and services relate.
-- [Menu flow](docs/diagrams/menu-flow.md) follows navigation through the Qt application.
+### Class diagram
+
+![MatchForge UML class diagram showing tournament entities, services, utilities, and their relationships](assets/diagrams/MatchForgeDDD.png)
+
+[Open full-size UML](assets/diagrams/MatchForgeDDD.png) · [Editable draw.io file](assets/diagrams/MatchForgeDDD.drawio)
+
+### Menu flow
+
+The original console design shows how players and tournaments are created, searched, and managed. The current app uses Qt Widgets.
+
+![Original MatchForge console menu flow for player and tournament management](assets/diagrams/menu-flow.png)
+
+[Open full-size menu flow](assets/diagrams/menu-flow.png)
