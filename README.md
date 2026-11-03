@@ -14,3 +14,7 @@ object-oriented programming, Qt, and SQLite.
 ## Technologies
 
 C++20, Qt Widgets, SQLite, CMake, and Boost.UUID.
+## Diagrams
+
+- [Class diagram](docs/diagrams/class-diagram.md) shows how players, tournaments, matches, and services relate.
+- [Menu flow](docs/diagrams/menu-flow.md) follows navigation through the Qt application.
